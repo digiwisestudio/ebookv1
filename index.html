@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookHaven Library</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/dark-mode.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Privacy Notice -->
+  <div id="privacy-notice" class="privacy-notice">
+    <div class="privacy-content">
+      <h3>Privacy Notice</h3>
+      <p>This website uses cookies to enhance your browsing experience. We respect your privacy and are committed to protecting your personal data.</p>
+      <button id="accept-privacy">I Understand</button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-book-open"></i>
+        <h1>BookHaven</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#authors">Authors</a></li>
+          <li><a href="#request">Request</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+      </nav>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </label>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#authors">Authors</a></li>
+      <li><a href="#request">Request</a></li>
+      <li><a href="#donate">Donate</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="typing-text">Welcome to BookHaven</h1>
+        <p>Discover <span id="book-count">180,000+</span> books from renowned authors across various categories.</p>
+        <div class="hero-buttons">
+          <button id="get-started" class="btn primary-btn">Explore Books</button>
+          <button id="learn-more" class="btn secondary-btn">Learn More</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Library Books">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section id="search-section" class="search-section">
+    <div class="container">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search by title, author, or category...">
+        <button id="search-btn" class="btn search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="filter-container">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Books</button>
+          <button class="filter-tab" data-filter="popular">Popular</button>
+          <button class="filter-tab" data-filter="education">Education</button>
+          <button class="filter-tab" data-filter="fiction">Fiction</button>
+          <button class="filter-tab" data-filter="self-improvement">Self-Improvement</button>
+          <button class="filter-tab" data-filter="business">Business</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Section -->
+  <section id="books" class="books-section">
+    <div class="container">
+      <h2 class="section-title">Featured Books</h2>
+      <div id="books-container" class="books-container">
+        <!-- Books will be dynamically added here -->
+      </div>
+      <div class="pagination">
+        <button id="prev-page" class="btn pagination-btn" disabled>
+          <i class="fas fa-chevron-left"></i> Previous
+        </button>
+        <span id="page-info">Page 1 of 1</span>
+        <button id="next-page" class="btn pagination-btn">
+          Next <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authors Section -->
+  <section id="authors" class="authors-section">
+    <div class="container">
+      <h2 class="section-title">Popular Authors</h2>
+      <div class="authors-filter">
+        <input type="text" id="author-search" placeholder="Search for an author...">
+      </div>
+      <div class="authors-list" id="authors-list">
+        <!-- Authors will be populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Form Section -->
+  <section id="request" class="request-section">
+    <div class="container">
+      <h2 class="section-title">Request a Book</h2>
+      <p class="section-description">Can't find the book you're looking for? Let us know and we'll try to add it to our collection.</p>
+      <button id="show-request-form" class="btn primary-btn">Request a Book</button>
+      <div id="request-form-container" class="request-form-container hidden">
+        <iframe src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section id="donate" class="donation-section">
+    <div class="container">
+      <h2 class="section-title">Support Our Library</h2>
+      <p class="section-description">If you enjoy our library, consider supporting us with a donation via GCash.</p>
+      <div class="donation-container">
+        <div class="qr-code">
+          <img id="gcash-qr" src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="GCash QR Code">
+          <p>Scan to donate</p>
+        </div>
+        <div class="donation-info">
+          <p>Your donations help us to:</p>
+          <ul>
+            <li>Add more books to our collection</li>
+            <li>Maintain the website</li>
+            <li>Provide better services</li>
+          </ul>
+          <button id="donate-button" class="btn primary-btn">Donate via GCash</button>
+        </div>
+      </div>
+      <div id="thank-you-message" class="thank-you-message hidden">
+        <i class="fas fa-heart"></i>
+        <h3>Thank You!</h3>
+        <p>Your support means the world to us!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About BookHaven</h3>
+          <p>BookHaven is a digital library providing access to thousands of books across various categories and from renowned authors worldwide.</p>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#authors">Authors</a></li>
+            <li><a href="#request">Request</a></li>
+            <li><a href="#donate">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> contact@bookhaven.com</p>
+          <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BookHaven Library. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/authors.js"></script>
+  <script src="scripts/books.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/dark-mode.js"></script>
+</body>
+</html>

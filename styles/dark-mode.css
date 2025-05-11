@@ -1,0 +1,106 @@
+/* Dark Mode Styles */
+body.dark-mode {
+  --text-color: #f7f9fc;
+  --text-light: #cbd5e0;
+  --background-color: #1a202c;
+  --background-alt: #2d3748;
+  --border-color: #4a5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #header {
+  background-color: rgba(26, 32, 44, 0.9);
+}
+
+body.dark-mode .logo h1,
+body.dark-mode .logo i {
+  color: #f6ad55;
+}
+
+body.dark-mode .book-card,
+body.dark-mode .author-card,
+body.dark-mode .thank-you-message {
+  background-color: var(--background-alt);
+}
+
+body.dark-mode .book-title {
+  color: #f6ad55;
+}
+
+body.dark-mode #search-input,
+body.dark-mode #author-search {
+  background-color: var(--background-alt);
+  color: var(--text-color);
+}
+
+body.dark-mode .filter-tab.active {
+  color: #f6ad55;
+}
+
+body.dark-mode .filter-tab::after,
+body.dark-mode .section-title::after,
+body.dark-mode .hero-content h1::after,
+body.dark-mode .footer-section h3::after {
+  background-color: #f6ad55;
+}
+
+body.dark-mode .back-to-top,
+body.dark-mode input:checked + .slider {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode .fa-sun {
+  color: #f6ad55;
+}
+
+body.dark-mode .primary-btn {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode .primary-btn:hover {
+  background-color: #fbd38d;
+}
+
+body.dark-mode .secondary-btn {
+  color: #f6ad55;
+  border-color: #f6ad55;
+}
+
+body.dark-mode .secondary-btn:hover {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode .book-category {
+  background-color: #4a5568;
+  color: #f6ad55;
+}
+
+body.dark-mode .search-btn {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode .search-btn:hover {
+  background-color: #fbd38d;
+}
+
+body.dark-mode #donate-button {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode #donate-button:hover {
+  background-color: #fbd38d;
+}
+
+body.dark-mode #show-request-form {
+  background-color: #f6ad55;
+  color: #1a202c;
+}
+
+body.dark-mode #show-request-form:hover {
+  background-color: #fbd38d;
+}
